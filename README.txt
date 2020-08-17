@@ -3,7 +3,7 @@
              ----------------------------------------------------------
 
 
----------------CONTENTS---------------
+                      ---------------CONTENTS---------------
 
 ABOUT THE PROJECT
     What is this Project?
@@ -22,7 +22,7 @@ CODING IMPLEMENTATION
 
 
 
----------------ABOUT THE PROJECT---------------
+                    ---------------ABOUT THE PROJECT---------------
 
 
 
@@ -38,7 +38,9 @@ The virtual reality game, Racket Fury on Playstation VR (PSVR) is arguably the m
 
 However, the game lacks competitive features such as leaderboard, leagues, tournaments and a record of matches played.  There is little incentive for players to play online and it is evident that there is a lack of players going online.  Furthermore, the online play feature was a very late update, that arrived a year after the release of the game. That means many owners are unaware of the online feature. 
 
-The developers of the game are a small team and are no longer focussed on providing updates for the PSVR version at least for the foreseeable future.  They are now focussed, understandably, on the more substantial userbase of the Oculus Quest version.  So this project hopefully fills that gap to serve the RF community
+The developers of the game are a small team and are no longer focussed on providing updates for the PSVR version at least for the foreseeable future.  They are now focussed, understandably, on the more substantial userbase of the Oculus Quest version.  
+
+So this project hopefully fills that gap to serve the online RF community with a hub to compete in leagues and arrange friendly or league matches with each other.
 
 
 
@@ -46,7 +48,7 @@ The developers of the game are a small team and are no longer focussed on provid
 
 Likely, there is.  Though how much is an uncertainty.   On the Racket Fury PSN community groups, there are around 60 players who have posted asking for a game with anyone.  There have also been a further 40 players expressing interest on the Reddit PSVR subforum.  The problem with PSN game communities is that Sony Playstation has deactivated the smartphone app PSN community messaging service, so communication can only be done via the PS4 console UI which is not easy to do without a keyboard.   This project aims to deliver an easier communication method without users needing to enter any personal email or comms details.  
 
-However, it is developed by a small team who are now focussed on the more substantial user base of the Oculus Quest.  The and is unlikely to receive version which gets more regular updates and established leaderboard and tournaments.  
+
 
 
 
@@ -70,11 +72,11 @@ A accompanying social media accounts will also be setup.
 "Visual example of RF Box League structure .JPG"
 
 
-Each world server (eg Europe, Japan, USA etc) will have a league that runs in consecutive seasons,  each season lasting for 3 weeks.  It is not practical to have a worldwide league as playing opponents on different servers to their own results in too much lag for the game to be playable.  However, there may be a pairing of servers that have sufficiently low lag but this needs to be test. For instance, it is possible for servers USA East and USA West to have sufficiently low ping rate for plays from both servers to play each other, so can be combined as one league. 
+Each world server (eg Europe, Japan, USA etc) will have a league that runs in consecutive seasons,  each season lasting for 3 weeks.  It is not practical to have a worldwide league because opponents on different servers to their own, results in too much lag for the game to be playable.  However, there may be a pairing of servers (sucha as USA EAST and USA WEST servers) that have sufficiently low lag between them so that they can be combined into one league but ping rates need to be tested before deciding to merge servers into a league.
 
 The league is divided into divisions, where each division contains up to 7 players of a similar standard.  Each player plays one match against all other players in their division before the season ends.  A win rewards the player 3 points, losing a game rewards the player 1 point, a draw rewards both players 2 points.  Points are not rewarded for unplayed games, nor to any player that forfeits a game.  If a player forfeits a game, the opponent will be rewarded 3 points. 
 
-League matches are played in a best out of five games format.  In other words, the winner of a league match is the first player to win 3 games.  The games won is recorded onto the league database via a match results entry form on the website. If for some valid reason, the match was not completed and could not be resumed on another day, then the match must be recorded as a draw.   Players will be encouraged to record their match using the PS4's game quick recording facility (actioned by double-clicking the share button on the move controller.  Double-clicking the share button again after the match will end the recording) in case disputes occur on the number of games won.  Players will be advised to set the default recording length to maximum one hour on the PS4 Settings Menu as the default length is probably 15 minutes.  Players will also be advised to keep the video recordings of a match for at least 3 days after results submission giving time for the opponent to dispute. 
+League matches are played in a best out of five games format.  In other words, the winner of a league match is the first player to win 3 games.  The games won is recorded onto the league database via a match results entry form on the website. If for some valid reason, the match was not completed and could not be resumed on another day, then the match must be recorded as a draw.   Players will be encouraged to video record their match from the start, using the PS4's game quick recording facility (actioned by double-clicking the share button on the move controller.  Double-clicking the share button again after the match will end the recording) in case disputes occur on the number of games won.  Players will be advised to set the default recording length to maximum one hour on the PS4 Settings Menu as the default length is probably 15 minutes.  Players will also be advised to keep the video recordings of a match for at least 3 days after results submission giving time for the opponent to dispute. 
 
 At the end of every season, the top two players with the most points in each division promote up a division (except for the top division) and bottom two demotes to lower-division (except for lowest division).  If the 2nd and 3rd highest points are equal, then 2nd place is determined by who played the most matches.  If number of matches played is also equal, then 2nd place is determined by whoever has the larger game won-lost game difference.   So if player A games were as follows:
 
@@ -106,9 +108,12 @@ The first season will not be perfect in grouping similar standards but as the se
 Anyone can use the Player database to find a player that is on their server.  Players who register will include their PSN ID, server and initial self-assessed standard (Good, intermediate and Beginner).  This is all the information needed to register on the database.  On registering, players will be recommended to also submit their email address (private) so that the league organiser can send notifications of the new season start dates and announcements of the end of season results. 
 
 
----------------CODING IMPLEMENTATION---------------
+                   ---------------CODING IMPLEMENTATION---------------
 
-The relational database of the league and players structure will be designed using MySQL Workbench.  PHP will be the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript will be used for frontend development.   All languages will be learnt via www.Udemy.com courses and www.W3Schools.com.  
+
+---------------Programming Tools and languages to be used---------------
+
+The relational database of the league and players structure will be designed using MySQL Workbench.  PHP will be the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript will be used for frontend development due to the level of knowledge and current learning curve of the developer (me, Tej Dyal).
 
 
 ---------------Priority features and functions to implement for this project:---------------
