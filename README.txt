@@ -1,3 +1,8 @@
+             ----------------------------------------------------------
+             |  Racket Fury PSVR Online League and Community Project  |
+             ----------------------------------------------------------
+
+
 ---------------CONTENTS---------------
 
 ABOUT THE PROJECT
@@ -34,6 +39,8 @@ The virtual reality game, Racket Fury on Playstation VR (PSVR) is arguably the m
 However, the game lacks competitive features such as leaderboard, leagues, tournaments and a record of matches played.  There is little incentive for players to play online and it is evident that there is a lack of players going online.  Furthermore, the online play feature was a very late update, that arrived a year after the release of the game. That means many owners are unaware of the online feature. 
 
 The developers of the game are a small team and are no longer focussed on providing updates for the PSVR version at least for the foreseeable future.  They are now focussed, understandably, on the more substantial userbase of the Oculus Quest version.  So this project hopefully fills that gap to serve the RF community
+
+
 
 ---------------If there are not many players online, is there enough demand for this project?---------------
 
