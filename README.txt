@@ -66,6 +66,10 @@ A accompanying social media accounts will also be setup.
 
 ---------------How will the leagues work?---------------
 
+(See an example visual image of league structure on the Frontend reposit:
+"Visual example of RF Box League structure .JPG"
+
+
 Each world server (eg Europe, Japan, USA etc) will have a league that runs in consecutive seasons,  each season lasting for 3 weeks.  It is not practical to have a worldwide league as playing opponents on different servers to their own results in too much lag for the game to be playable.  However, there may be a pairing of servers that have sufficiently low lag but this needs to be test. For instance, it is possible for servers USA East and USA West to have sufficiently low ping rate for plays from both servers to play each other, so can be combined as one league. 
 
 The league is divided into divisions, where each division contains up to 7 players of a similar standard.  Each player plays one match against all other players in their division before the season ends.  A win rewards the player 3 points, losing a game rewards the player 1 point, a draw rewards both players 2 points.  Points are not rewarded for unplayed games, nor to any player that forfeits a game.  If a player forfeits a game, the opponent will be rewarded 3 points. 
@@ -150,9 +154,13 @@ rf_league_db_forward engineer.sql
 ---------------Front End Main Github files and their description:---------------
 (NOTE: Front END is very underdeveloped but this is a skeletal structure of the intended result.)
 
-Main home page showing links and buttons to the site's features.
-
+Main home page showing links and buttons to the site's features:
 index.html  
+
+An image mock up of the League showing dropdown box selections and League status of all divisions:
+Visual example of RF Box League structure .JPG
+
+
 
 
 
