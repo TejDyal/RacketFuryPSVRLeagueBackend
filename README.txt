@@ -154,6 +154,12 @@ EER relational DB model diagram (created in MySQL Workbench):
 Forward engineered MySQL script (the creation of the dB):
 rf_league_db_forward engineer.sql
 
+Folder: "Data queries" contain several queries to test the functioning of the database
+Folder: "db data and structure dump"  is the database structure and test data.
+
+Test data simulation spreadsheet of two different leagues running for one season :
+one season simulation of league results.ods
+
 
 
 ---------------Front End Main Github files and their description:---------------
