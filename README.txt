@@ -15,12 +15,15 @@ ABOUT THE PROJECT
 
 
 CODING IMPLEMENTATION
-    Programming Tools and languages to be used
+    Development Environment  Details
     Priority features and functions to implement for this project:
     Additional features for future:
     Backend Main Github Files and their description:
     Front End Main Github files and their description:
 
+RESOURCES USED FOR THIS PROJECT
+    Instaling PHP on Windows 10
+    Learning Material
 
 
                     ---------------ABOUT THE PROJECT---------------
@@ -112,22 +115,14 @@ Anyone can use the Player database to find a player that is on their server.  Pl
                    ---------------CODING IMPLEMENTATION---------------
 
 
----------------Programming Tools and languages to be used---------------
+---------------Development environment details---------------
 
-The relational database of the league and players structure is developed with MySQL Workbench.  PHP is the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript is used for frontend development due to the level of knowledge and current learning curve of the developer (Tej Dyal).  During development on a local Windows 10 machine, both PHP and MySQL are installed natively as each have their own local host server function and both have a Windows 10 install.  This means no additonal server emulation base was needed (such as Apache).  Local development environment such as WAMP, XAMPP, MAMP are not needed...at least so far.
+Whole project is developped on a Windows 10 local machine.
 
-Install php instruction:
-download threaded 64 bit latest version (v7.4.9 here) for Windows
-Unzip to c:\PHP7 (or anywhere of your choosing)
-append this path to System Environment Variables (ie System Properties->Environement Variables, In System Variables section, double click on Path, click New, type C:\PHP7, click OK to everything as you cascade backwards through the window pop ups.
+The relational database of the league and players structure is developed with MySQL Workbench.  PHP is the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript is used for frontend development due to the level of knowledge and current learning curve of the developer (Tej Dyal).  During development on a local Windows 10 machine, both PHP and MySQL are installed natively as each have their own local host server function and both have a Windows 10 install.  This means no additonal server emulation base was needed (such as Apache).  Local development environment such as WAMP, XAMPP, MAMP are not needed...at least so far.  See Resources used section for how php was installed on Windows.
 
-MYSQLi is the current connectivity protocol used between PHP and MySQL. To achieve this on Windows install, the php.ini file in the PHP7 directory needed to be renamed (delete the developer extension to leave it as php.ini).  Uncomment two lines (ie remove semicolon):  
-
-extension_dir = "ext"
-
-extension=mysqli
-
-That completes the install.
+VSCODE is used as the editor for HTML5/CSS, javascript and PHP.
+MySQL Workbench is the UI for database managment, design, creation and queries testing.
 
 
 
@@ -189,10 +184,63 @@ Visual example of RF Box League structure .JPG
 
 
 
+-------------------------------RESOURCES USED FOR THIS PROJECT---------------------------
 
 
 
+Installing MySQL instructions:
+https://youtu.be/u96rVINbAUI
 
 
+---------------Installing PHP on Windows 10:---------------
+
+https://www.edureka.co/blog/how-to-install-php-on-windows/
+
+In case above website ceases, here is a quick summarry of the install:  
+download threaded 64 bit latest version (v7.4.9 here) for Windows from official PHP site.
+Unzip to c:\PHP7 (or anywhere of your choosing)
+Include this path in System Environment Variables (steps: System Properties->Environement Variables, In System Variables section, double click on Path, click New, type C:\PHP7, click OK to everything as you cascade backwards through the window pop ups.
+
+MYSQLi is the chosen connectivity protocol used between PHP and MySQL. To achieve this on Windows install, the php.ini file in the PHP7 directory needed to be renamed (delete the developer extension to leave it as php.ini).  Uncomment two lines (ie remove semicolon):  
+
+extension_dir = "ext"
+
+extension=mysqli
+
+That completes the PHP install and connectivity with MySQL.
+
+
+---------------Learning Material------------------
+
+Learning normalisation and DB theory:
+https://youtu.be/l5DCnCzDb8g
+https://youtu.be/UrYLYV7WSHM
+
+Understanding Many to Many relationship in clarity:
+https://youtu.be/1eUn6lsZ7c4
+
+Learning to create a database by visual design using MySQL Workbench EER diagram mode:
+https://youtu.be/HusL582R2TY
+https://youtu.be/w-0IWyAeZ3M
+https://youtu.be/K6w0bZjl_Lw
+
+Workbench Forward engineering tutorial:
+https://youtu.be/1sqhDJae-xY
+https://youtu.be/uKwR9fWsZJ4
+
+
+Learning MYSQL queries
+VIDEO: https://youtu.be/7S_tz1z_5bA
+https://www.w3schools.com/sql/default.asp
+
+Learning PHP
+https://www.w3schools.com/php/default.asp
+
+Learning PHP in application to MySQL by building a fill social Network site
+https://www.udemy.com/course/make-a-social-media-website/  
+above link is a paid for Udemy course.
+
+Learning HTML5, CSS, Frameworks (Materialize), Flex Box, CSS Grid, and Javascript
+https://www.udemy.com/course/learn-html5-programming-from-scratch/
 
 
