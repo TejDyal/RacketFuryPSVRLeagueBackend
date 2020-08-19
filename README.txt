@@ -15,6 +15,7 @@ ABOUT THE PROJECT
 
 
 CODING IMPLEMENTATION
+    Programming Tools and languages to be used
     Priority features and functions to implement for this project:
     Additional features for future:
     Backend Main Github Files and their description:
@@ -113,7 +114,22 @@ Anyone can use the Player database to find a player that is on their server.  Pl
 
 ---------------Programming Tools and languages to be used---------------
 
-The relational database of the league and players structure will be designed using MySQL Workbench.  PHP will be the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript will be used for frontend development due to the level of knowledge and current learning curve of the developer (me, Tej Dyal).
+The relational database of the league and players structure is developed with MySQL Workbench.  PHP is the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript is used for frontend development due to the level of knowledge and current learning curve of the developer (Tej Dyal).  During development on a local Windows 10 machine, both PHP and MySQL are installed natively as each have their own local host server function and both have a Windows 10 install.  This means no additonal server emulation base was needed (such as Apache).  Local development environment such as WAMP, XAMPP, MAMP are not needed...at least so far.
+
+Install php instruction:
+download threaded 64 bit latest version (v7.4.9 here) for Windows
+Unzip to c:\PHP7 (or anywhere of your choosing)
+append this path to System Environment Variables (ie System Properties->Environement Variables, In System Variables section, double click on Path, click New, type C:\PHP7, click OK to everything as you cascade backwards through the window pop ups.
+
+MYSQLi is the current connectivity protocol used between PHP and MySQL. To achieve this on Windows install, the php.ini file in the PHP7 directory needed to be renamed (delete the developer extension to leave it as php.ini).  Uncomment two lines (ie remove semicolon):  
+
+extension_dir = "ext"
+
+extension=mysqli
+
+That completes the install.
+
+
 
 
 ---------------Priority features and functions to implement for this project:---------------
