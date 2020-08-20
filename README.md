@@ -275,3 +275,6 @@ There is a bug in SQL Workbench where the EER diagrams fails to show the composi
 https://github.com/horeca2/MySQL-Workbench-Bug-92141-patch
 
 Following theses instructions successfully fixed the problem, so can present a perfectly illustrated EER diagram of the project as shown above.
+
+DIscussion of the annoying bug here:
+https://bugs.mysql.com/bug.php?id=92141
