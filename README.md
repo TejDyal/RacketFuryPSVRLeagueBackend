@@ -172,7 +172,7 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 <br>
 
 EER relational DB model diagram (created in MySQL Workbench):<br><br>
-![EER diagram](rf_league_db.jpg)
+![EER diagram](rf_league_db.png)
 <br><br>
 MySQL  Workbench file:<br>
 "Racket Fury League Model V2.mwb"
