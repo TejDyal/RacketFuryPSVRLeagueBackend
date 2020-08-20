@@ -24,6 +24,8 @@
     1. [Installing PHP on Windows 10](#Installing-PHP-on-Windows-10)
     1. [Learning Material](#Learning-Material)
 
+1. [NOTABLE TROUBLESHOOTING AND SOLUTIONS](#NOTABLE-TROUBLESHOOTING-AND-SOLUTIONS)
+
 <br>
 
 ## __ABOUT THE PROJECT__
@@ -266,3 +268,10 @@ Learning HTML5, CSS, Frameworks (Materialize), Flex Box, CSS Grid, and Javascrip
 https://www.udemy.com/course/learn-html5-programming-from-scratch/<br>
 
 
+## __NOTABLE TROUBLESHOOTING AND SOLUTIONS__
+
+There is a bug in SQL Workbench where the EER diagrams fails to show the composit FK/PK symbols on tables which makes the EER diagram useless for  presentation.  This bug has never been fixed and may not ever be fixed as it isnt marked as a priority by the developers. However, Github user, horeca2 had solved the problem and published a simple fix here <br>
+
+https://github.com/horeca2/MySQL-Workbench-Bug-92141-patch
+
+Following theses instructions successfully fixed the problem, so can present a perfectly illustrated EER diagram of the project as shown above.
