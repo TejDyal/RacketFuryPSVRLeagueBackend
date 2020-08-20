@@ -4,12 +4,12 @@
   ## __CONTENTS__
 
 1. [ABOUT THE PROJECT](#about-the-project)
-    1. [What is this Project?](#what-is-this-project?)
-    1. [Why is this project needed?](#why-is-this-project-needed?)
-    1. [Is there enough demand for this project?](#is-there-enough-demand-for-this-project?)
-    1. [How will this league be made known to Racket Fury PSVR owners?](#how-will-this-league-be-made-known-to-racket-fury-psvr-owners?)
-    1. [How will the leagues work?](#how-will-the-leagues-work?)
-    1. [What if a player doesn't want to enter leagues but wants to just arrange friendlies?](#what-if-a-player-doesn't-want-to-enter-leagues-but-wants-to-just-arrange-friendlies?)
+    1. [What is this Project?](#what-is-this-project)
+    1. [Why is this project needed?](#why-is-this-project-needed)
+    1. [Is there enough demand for this project?](#is-there-enough-demand-for-this-project)
+    1. [How will this league be made known to Racket Fury PSVR owners?](#how-will-this-league-be-made-known-to-racket-fury-psvr-owners)
+    1. [How will the leagues work?](#how-will-the-leagues-work)
+    1. [What if a player doesn't want to enter leagues but wants to just arrange friendlies?](#what-if-a-player-doesn't-want-to-enter-leagues-but-wants-to-just-arrange-friendlies)
 
 
 1. [CODING IMPLEMENTATION](#CODING-IMPLEMENTATION)
