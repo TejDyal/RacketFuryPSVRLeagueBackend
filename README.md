@@ -182,8 +182,13 @@ MySQL  Workbench file:<br>
 Forward engineered MySQL script (the creation of the dB):<br>
 "rf_league_db_forward engineer.sql"
 
+The above DB creation script is built upon further over the project development with modifying db scripts contained in this folder:
+"Modifying structure queries since original EER forward engineering"
+
+So if wanting to create a duplicate of the current database structure via SQL script, execute "rf_league_db_forward engineer.sql" and then the scripts in the above folder.
+
 Folder: "Data queries" contain several queries to test the functioning of the database
-Folder: "db data and structure dump"  is the database structure and test data.
+Folder: "db data and structure dump"  is the backup database structure and test data.  
 
 Test data simulation spreadsheet of two different leagues running for one season :<br>
 "one season simulation of league results.ods"
@@ -195,7 +200,10 @@ Test data simulation spreadsheet of two different leagues running for one season
 (NOTE: Front end is very underdeveloped but this is a skeletal structure of the intended result.)
 
 Main home page showing links and buttons to the site's features:<br>
-"index.html"
+"index.php"
+
+
+
 <br><br>
 
 ## __RESOURCES USED FOR THIS PROJECT__
@@ -262,7 +270,6 @@ https://www.w3schools.com/php/default.asp<br>
 
 Learning PHP in application to MySQL by building a fill social Network site<br>
 https://www.udemy.com/course/make-a-social-media-website/  <br>
-above link is a paid for Udemy course.
 
 Learning HTML5, CSS, Frameworks (Materialize), Flex Box, CSS Grid, and Javascript<br>
 https://www.udemy.com/course/learn-html5-programming-from-scratch/<br>
