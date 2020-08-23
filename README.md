@@ -274,6 +274,13 @@ https://www.udemy.com/course/make-a-social-media-website/  <br>
 Learning HTML5, CSS, Frameworks (Materialize), Flex Box, CSS Grid, and Javascript<br>
 https://www.udemy.com/course/learn-html5-programming-from-scratch/<br>
 
+Understanding complete Regular Expressions(REGEX)
+https://www.youtube.com/watch?v=sa-TUpSx1JA
+
+Tool for testing REGEX
+https://regex101.com/r/OykR4H/1
+
+
 
 ## __NOTABLE TROUBLESHOOTING AND SOLUTIONS__
 
