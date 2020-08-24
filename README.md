@@ -14,6 +14,7 @@
 
 1. [CODING IMPLEMENTATION](#CODING-IMPLEMENTATION)
     1. [Development Environment  Details](#Development-Environment-Details)
+    1. [Project Implementation Sequence Plan](#Project-Implementation-Sequence-Plan)
     1. [Priority features and functions to implement for this project](#Priority-features-and-functions-to-implement-for-this-project)
     1. [Additional features for future](#Additional-features-for-future)
     1. [Backend Main Github Files and their description](#Backend-Main-Github-Files-and-their-description)
@@ -118,7 +119,7 @@ Unlike video game leaderboards, this structure rewards players of all standards 
 The first season will not be perfect in grouping similar standards but as the seasons continue and players get promoted/demoted, players will, by nature of the box league structure, progress to the appropriate division of their playing standard.
 
 <br><br>
-
+When a new player resgisters, they will be asked to self rate their ability (beginner, average, good) so they can be placed in an appropriate standard division.
 
 ### __What if a player doesn't want to enter leagues but wants to just arrange friendlies?__
 <br>
@@ -160,6 +161,28 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 
 <br><br>
 
+### __Project Implementation Sequence Plan__
+<br>
+
+1. Create a relational database of whole league structure in MySql
+2. test database with test data simulation of a season of matches for two different leagues
+3. create a home page with all links to website functions
+4. player registration form
+5. set up a one-off procedure for the first season league of the website's lifetime, in placing players into their appropriate divisions according to their self-rated standards.  Leave two-player vacancies in each division to allow late sign-ups.  
+6. match results form
+7. join a division/league 
+8. find a player
+9. league results
+10. create a user login
+11. profile and history
+12. apply style and presentation
+13. test all functionality, simulating three seasons of leagues with various permutations of new players registering, leaving, etc.
+14. deploy, publish and announce website.
+15. create social media connecting platforms (FB, Twitter, Instagram, etc).
+16. implement additional features and fixes.
+
+<br>
+
 ### __Additional features for future__
 <br>
 
@@ -169,6 +192,7 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 
 <br>
 
+<br>
 
 ### __Backend Main Github Files and their description__
 <br>
