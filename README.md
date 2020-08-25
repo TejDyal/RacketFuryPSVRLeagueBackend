@@ -145,7 +145,7 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 
 <br>
 
-* Store all-league and player information into a relational database.
+* Auto maintain all-league and player information into a relational database.
 
 * Show league current status and results history
 
@@ -189,6 +189,9 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 * Internal messaging system to challenge players.
 
 * Players can record their non-league matches results.
+
+* seperate Admin account to create new seasons, leagues, add/ban/suspend players etc  (currently done manually by db programmer)
+
 
 <br>
 
