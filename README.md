@@ -190,7 +190,7 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 
 * Players can record their non-league matches results.
 
-* seperate Admin account to create new seasons, leagues, add/ban/suspend players etc  (currently done manually by db programmer)
+* seperate Admin account and dashboard to create new seasons, leagues, add/ban/suspend players etc  (currently done manually by db programmer)
 
 
 <br>
@@ -288,18 +288,20 @@ https://youtu.be/1sqhDJae-xY<br>
 https://youtu.be/uKwR9fWsZJ4
 
 
-Learning MYSQL queries<br>
+Learning advanced MYSQL queries and concepts<br>
+https://codewithmosh.com/p/complete-sql-mastery  by Mosh Hamedani<br> (paid course)
+https://www.mysqltutorial.org/<br>
 https://youtu.be/7S_tz1z_5bA<br>
 https://www.w3schools.com/sql/default.asp<br>
 
 Learning PHP<br>
 https://www.w3schools.com/php/default.asp<br>
 
-Learning PHP in application to MySQL by building a fill social Network site<br>
-https://www.udemy.com/course/make-a-social-media-website/  <br>
+Learning PHP in application to MySQL by building a full social Network site<br>
+https://www.udemy.com/course/make-a-social-media-website/  <br> (paid course)
 
 Learning HTML5, CSS, Frameworks (Materialize), Flex Box, CSS Grid, and Javascript<br>
-https://www.udemy.com/course/learn-html5-programming-from-scratch/<br>
+https://www.udemy.com/course/learn-html5-programming-from-scratch/<br> (paid course)
 
 Understanding complete Regular Expressions(REGEX)<br>
 https://www.youtube.com/watch?v=sa-TUpSx1JA<br>
