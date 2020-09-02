@@ -136,7 +136,8 @@ Whole project is developped on a Windows 10 local machine.
 The relational database of the league and players structure is developed with MySQL Workbench.  PHP is the chosen language to query the database at the backend.  HTML5, CSS, CSS Grid, and Javascript is used for frontend development due to the level of knowledge and current learning curve of the developer (Tej Dyal).  During development on a local Windows 10 machine, both PHP and MySQL are installed natively as each have their own local host server function and both have a Windows 10 install.  This means no additonal server emulation base was needed (such as Apache).  Local development environment such as WAMP, XAMPP, MAMP are not needed...at least so far.  See Resources used section for how php was installed on Windows.
 <br><br>
 VSCODE is used as the editor for HTML5/CSS, javascript and PHP.<br>
-MySQL Workbench is the UI for database managment, design, creation and queries testing.
+MySQL Workbench is the UI for database managment, design, creation and queries testing.<br>
+LibreOffice Calc is used for Website layout mockup design.
 
 <br><br>
 
@@ -166,7 +167,8 @@ MySQL Workbench is the UI for database managment, design, creation and queries t
 
 1. Create a relational database of whole league structure in MySql
 2. test database with test data simulation of a season of matches for two different leagues
-3. create a home page with all links to website functions
+1. Create a skeletal home page with all links to website functions
+3. Create a website layout mockup for all pages and permutations of Home page (eg, logged in, logged out view etc)
 4. player registration form
 5. set up a one-off procedure for the first season league of the website's lifetime, in placing players into their appropriate divisions according to their self-rated standards.  Leave two-player vacancies in each division to allow late sign-ups.  
 6. match results form
@@ -229,6 +231,12 @@ Test data simulation spreadsheet of two different leagues running for one season
 Main home page showing links and buttons to the site's features:<br>
 "index.php"
 
+<br>
+
+### __Mock up of Website__
+<br><br>
+Home Page (user logged in View)
+![Home Page Mockup](Home_Page_Mockup.png)
 
 
 <br><br>
