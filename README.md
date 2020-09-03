@@ -112,6 +112,10 @@ and for Player B:
 
 both have 10 points, both played 4 matches but player A has the larger games difference (11-5=6) compared to Player B (6-3). So Player A takes the second place and promotes to next division in the next season.  The same principle applies to the players at the bottom of the division. 
 <br><br>
+
+To encourage players to play all of their matches, a bonus point will be awarded when a player gets all of their games played in a season.
+<br><br>
+
 In the event that the 2nd and 3rd place have same points, played the same number of games and have the same game difference, then in this exceptional circumstance, top 3 players will promote to the next division and bottom 3 players of that division will be demoted. 
 <br><br>
 Unlike video game leaderboards, this structure rewards players of all standards the opportunity to be a winner in their own division as the aim is to match players of a similar standard.   All division winners at the end of every season will be posted onto the website and on social media such as Facebook.
@@ -236,7 +240,7 @@ Main home page showing links and buttons to the site's features:<br>
 ### __Mock up of Website__
 <br><br>
 Home Page (user logged in View)
-![Home Page Mockup](Home_Page_Mockup.png)
+![Home Page Mockup](Home_Page_Mockup_Logged_in_and_playing_in_league_view.JPG)
 
 
 <br><br>
@@ -297,7 +301,7 @@ https://youtu.be/uKwR9fWsZJ4
 
 
 Learning advanced MYSQL queries and concepts<br>
-https://codewithmosh.com/p/complete-sql-mastery  by Mosh Hamedani<br> (paid course)
+https://codewithmosh.com/p/complete-sql-mastery  by Mosh Hamedani (paid course)<br> 
 https://www.mysqltutorial.org/<br>
 https://youtu.be/7S_tz1z_5bA<br>
 https://www.w3schools.com/sql/default.asp<br>
@@ -306,10 +310,10 @@ Learning PHP<br>
 https://www.w3schools.com/php/default.asp<br>
 
 Learning PHP in application to MySQL by building a full social Network site<br>
-https://www.udemy.com/course/make-a-social-media-website/  <br> (paid course)
+https://www.udemy.com/course/make-a-social-media-website/ (paid course) <br> 
 
 Learning HTML5, CSS, Frameworks (Materialize), Flex Box, CSS Grid, and Javascript<br>
-https://www.udemy.com/course/learn-html5-programming-from-scratch/<br> (paid course)
+https://www.udemy.com/course/learn-html5-programming-from-scratch/ (paid course)<br> 
 
 Understanding complete Regular Expressions(REGEX)<br>
 https://www.youtube.com/watch?v=sa-TUpSx1JA<br>
