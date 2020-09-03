@@ -19,6 +19,7 @@
     1. [Additional features for future](#Additional-features-for-future)
     1. [Backend Main Github Files and their description](#Backend-Main-Github-Files-and-their-description)
     1. [Front End Main Github files and their description](#Front-End-Main-Github-files-and-their-description)
+    1. [Mock up of Website](#Mock-up-of-Website)
 
 1. [RESOURCES USED FOR THIS PROJECT](#RESOURCES-USED-FOR-THIS-PROJECT)
     1. [Installing MySQL on Windows 10 instructions](#Installing-MySQL-on-Windows-10-instructions)
@@ -238,9 +239,25 @@ Main home page showing links and buttons to the site's features:<br>
 <br>
 
 ### __Mock up of Website__
-<br><br>
-Home Page (user logged in View)
+
+<br>
+
+### Home Page (user logged in View)
+
 ![Home Page Mockup](Home_Page_Mockup_Logged_in_and_playing_in_league_view.JPG)
+<br><br>
+
+### Home Page (user logged in but not playing in league view)
+![Home Page Mockup](Home_Page_Mockup_logged_in_but_not_playing_in_league_view.JPG)
+<br><br>
+
+### Home Page (user logged in but not playing in league view)
+![Home Page Mockup](Home_Page_Mockup_not_logged_in_view.JPG)
+<br><br>
+
+### Home Page (user logged in but not playing in league view)
+![Home Page Mockup](Players_page_mockup_not_logged_in_view.JPG)
+<br><br>
 
 
 <br><br>
