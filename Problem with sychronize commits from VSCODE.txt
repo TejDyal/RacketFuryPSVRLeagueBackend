@@ -1,0 +1,22 @@
+VSCODE Terminal output when synchronising commits.  Result, Github does not reflect synch.
+
+> git pull --tags origin master
+From https://github.com/TejDyal/RacketFuryPSVRLeagueFrontEnd
+ * branch            master     -> FETCH_HEAD
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+
+
+Output when Pushing commits via Git GUI (Github reflects commits successfully)
+
+POST git-receive-pack (283779 bytes)
+Pushing to https://github.com/TejDyal/RacketFuryPSVRLeagueBackend
+To https://github.com/TejDyal/RacketFuryPSVRLeagueBackend
+   306e978..ce05716  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
