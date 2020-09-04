@@ -273,6 +273,12 @@ Main home page showing links and buttons to the site's features:<br>
 ![Players Page Mockup](Players_page_mockup_logged_in_view.JPG)
 <br><br>
 
+### League Page (only viewable to registered players):
+<br>
+
+![League Page Mockup](LeaguePage.JPG)
+<br><br>
+
 
 
 
