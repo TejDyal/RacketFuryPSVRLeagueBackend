@@ -238,26 +238,42 @@ Main home page showing links and buttons to the site's features:<br>
 
 <br>
 
-### __Mock up of Website__
+## __Mock up of Website__
 
 <br>
 
-### Home Page (user logged in View)
+### Home Page (user logged in View):
+<br>
+
 
 ![Home Page Mockup](Home_Page_Mockup_Logged_in_and_playing_in_league_view.JPG)
 <br><br>
 
-### Home Page (user logged in but not playing in league view)
+### Home Page (user logged in but not playing in league view):
+<br>
+
 ![Home Page Mockup](Home_Page_Mockup_logged_in_but_not_playing_in_league_view.JPG)
 <br><br>
 
-### Home Page (user logged in but not playing in league view)
+### Home Page (user logged in but not playing in league view):
+<br>
+
 ![Home Page Mockup](Home_Page_Mockup_not_logged_in_view.JPG)
 <br><br>
 
-### Home Page (user logged in but not playing in league view)
-![Home Page Mockup](Players_page_mockup_not_logged_in_view.JPG)
+### Players Page (user not logged in view):
+<br>
+
+![Players Page Mockup](Players_page_mockup_not_logged_in_view.JPG)
 <br><br>
+
+### Players Page (user logged in view):
+<br>
+
+![Players Page Mockup](Players_page_mockup_logged_in_view.JPG)
+<br><br>
+
+
 
 
 <br><br>
