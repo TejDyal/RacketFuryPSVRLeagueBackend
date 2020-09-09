@@ -1,4 +1,10 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `firstSeasonLeagueSetup`(in serverId int, seasonId int, maxPlayersInDiv int, minPlayersInDiv int, startDate date, seasonLength int)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `firstSeasonLeagueSetup`(in serverId int,
+																		seasonId int, 
+                                                                        maxPlayersInDiv int, 
+                                                                        minPlayersInDiv int, 
+                                                                        startDate date, 
+                                                                        endDate date,
+                                                                        seasonLength int)
 begin
 
 	declare noOfDivs int;
@@ -11,11 +17,19 @@ begin
     declare playersInLastDiv int;
     declare movePlayers bool;
 	
-    /* add new season to season table if it doesn't exist (remember different leagues might have different number of seasons) */
+    /* add new season to season and season_league tables if they don't exist (remember different leagues might have different number of seasons) */
     select max(Season_id) from season
     into s;
     if seasonId > s then
 		INSERT INTO season (`Season_id`) VALUES (seasonId);
+	end if;
+    select max(Season_id) 
+	from league_season
+    where League_id = serverId
+    into s;
+    if seasonId > s then
+		INSERT INTO league_season (`Season_id`, `League_id`, `startDate`, `endDate`) 
+        VALUES (seasonId, serverId, statDate, endDate);
 	end if;
 	
     /* sort all players playing in next season by their self rating and add a row index */
@@ -31,7 +45,7 @@ begin
         selfRating,
         @row_number:=@row_number+1
 	from player
-	where Server_id = serverId and enterInNextLeague = 1
+	where Server_id = serverId and enterInNextSeason = 1
 	order by selfRating;
     
     /* popagate columns with the league and Season ids */
@@ -70,7 +84,9 @@ begin
 		end if;
     end while;
     
-	/* TODO determine if there is sufficient players in the bottom division.  If there isn't then spread players into immediate upper divisions. Make sure to test there is enough divisions above.*/
+	/* determines if there is sufficient players in the bottom division.  
+			If there isn't then spread players into immediate upper divisions. 
+					Also tests there is enough divisions above.*/
     select count(Player_id)
     into playersInLastDiv
     from playerSort
