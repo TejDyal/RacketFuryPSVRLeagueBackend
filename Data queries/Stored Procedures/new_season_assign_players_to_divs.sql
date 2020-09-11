@@ -1,12 +1,13 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `newSeasonLeagueSetup`(in serverId int,
+CREATE PROCEDURE `newSeasonLeagueSetup`(in serverId int,
 											seasonId int, 
-                                            maxPlayersInDiv int, 
-                                            minPlayersInDiv int, 
-                                            startDate date,
-                                            endDate date,
-                                            seasonLength int)
+											maxPlayersInDiv int, 
+											minPlayersInDiv int, 
+											startDate date, 
+											endDate date,
+											seasonLength int)
 BEGIN
 	declare noOfDivs int;
+    declare currentDivPlayerCount int;
     declare playerCount int;
     declare currentMaxDiv int;
     declare divCount int;
@@ -37,11 +38,14 @@ BEGIN
 		select Division_id, 
                 Player_id, 
                 sum(points) as totalPoints, 
-                sum(noOfGamesWon) as gamesWon
+                sum(noOfGamesWon) as gamesWon,            
+				gamesCount(serverId, seasonId, Division_id, Player_Id) as gamesCount,
+                enterInNextSeason
 		from player_leaguematch
+        join player p using (Player_id)
         where Season_id = seasonId-1 and League_id = serverId
 		group by Division_id, Player_id
-		order by Division_id, totalPoints desc, gamesWon desc;
+		order by Division_id, totalPoints desc, gamesWon desc, gamesCount desc;
 
 	-- rank players by division
     drop table if exists playerSort;
@@ -51,35 +55,49 @@ BEGIN
 			Player_id, 
 			totalPoints, 
 			gamesWon,
+            gamesCount,
+            enterInNextSeason,
 			rank() over (partition by Division_id
-			order by totalPoints desc, gamesWon desc) playerRank
+			order by totalPoints desc, gamesWon desc, gamesCount desc) playerRank,
+            rank() over (partition by Division_id
+			order by totalPoints asc, gamesWon asc, gamesCount asc) playerRankReverse,
+            row_number() over (partition by Division_id
+			order by totalPoints desc, gamesWon desc, gamesCount desc) subRowNum,
+            row_number() over (partition by Division_id
+			order by totalPoints asc, gamesWon asc, gamesCount asc) subRowNumReverse            
 		from
-			tallyPlayerPointsbyDiv;
+			tallyPlayerPointsbyDiv
+		order by Division_id, totalPoints desc, gamesWon desc, gamesCount desc;
+	
+    -- remove players who are not playing next season
+    delete from playerSort
+    where enterInNextSeason = 0;
+ 
+	select count(Player_id)
+    into currentDivPlayerCount
+    from playerSort;
             
 	-- add in the new players in new season
-    select Player_id
-    from player
-    where Player_id not in (
-		select Player_id
-        from playerSort)
-        and enterInNextSeason = 1
-        and Server_id = serverId
-	order by Player_id;
-		
-	-- number of players in each current division that play in next season
-	drop view if exists countPlayersPerDiv;
-	create view countPlayersPerDiv as
-		select Division_id, count(Player_id)
-		from division_player dp
-		join player p using (Player_id)
-		where enterInNextSeason = 1 and League_id = serverId and Season_id = seasonId-1
-		group by Division_id
-		order by Division_id;
+	alter table playerSort
+    add column selfRating int,
+    add column rowNum int;
+    insert into playersort (Division_id, Player_id, selfRating)
+		select 0, Player_id, selfRating
+		from player
+		where Player_id not in (
+			select Player_id
+			from playerSort)
+			and enterInNextSeason = 1
+			and Server_id = serverId
+		order by selfRating;
         
-	
+	select count(Player_id)
+    into playerCount
+    from playerSort;	
     
-    /* popagate columns with the league and Season ids */
-    update playerSort set League_id = serverId, Season_id = seasonId;
+	set @rowNum = 0;
+	update playerSort
+		set rowNum = @rowNum:=@rowNum+1;
     
     /* calculate number of divisions needed */
     set noOfDivs = 0;
@@ -88,7 +106,8 @@ BEGIN
     from playerSort;
     set noOfDivs = ceiling(playerCount/maxPlayersInDiv);
     
-    /* increment divisons in divison table if the new number of divisions for the next league is more than current maximum */
+    /* increment divisons in divison table if the 
+			new number of divisions for the next league is more than current maximum */
     select max(Division_id)
     into currentMaxDiv
     from division;
@@ -98,58 +117,22 @@ BEGIN
         set currentMaxDiv = currentMaxDiv + 1;
 	end while;    
     
-    /* assign players to their division */
-    set divCount = 1;
-    set divPlayersCount = 0;
-    set rowPointer = 1;
-    while rowPointer <= playerCount do
-		update playerSort 
-        set Division_id = divCount
-        where row_num = rowPointer;
-        set rowPointer = rowPointer+1;
-        set divPlayersCount = divPlayersCount + 1;
-        if divPlayersCount = maxPlayersInDiv then
-			set divPlayersCount = 0;
-            set divCount = divCount+1;
-		end if;
-    end while;
-    
-	/* determines if there is sufficient players in the bottom division.  
-			If there isn't then spread players into immediate upper divisions. 
-					Also tests there is enough divisions above.*/
-    select count(Player_id)
-    into playersInLastDiv
-    from playerSort
-    where Division_id = noOfDivs;
-    if playersInLastDiv < minPlayersInDiv then
-		set rowPointer = playerCount;
-		while (playersInLastDiv > 0) and (divCount-playersInLastDiv > 0) do
-			update playerSort 
-			set Division_id = divCount-playersInLastDiv
-			where row_num = rowPointer;
-            set playersInLastDiv = playersInLastDiv-1;
-            set rowPointer = rowPointer - 1;
-		end while;
-        if playersInLastDiv = 0 then
-			set noOfDivs = noOfDivs-1;
-		end if;
-	end if;
-    
-    /* update league_season table with new season and dates*/
-    insert into league_season (League_id, Season_id, startDate, endDate)
-        values (serverId, seasonId, startDate, startDate+seasonLength);
-    
-    /* update league_season_division table with new season rows */
-    set divCount = 1;
-    set rowPointer = 1;
-    while divCount <= noOfDivs do
-		insert into league_season_division (League_id, Season_id, Division_id)
-        values (serverId, seasonId, divCount);
-        set divCount = divCount + 1;
-	end while;
-    
-    /* append playersort table to division_player table - (this completes the first league season setup) */
-    insert into division_player (League_id, Season_id, Division_id, Player_id)
-    select League_id, Season_id, Division_id, Player_id
-    from playerSort;
+    /* promote and relegate players from last season into their new divisions 
+			(bottom 2 players relegate to lower div, top 2 players promote to higher div) */
+	update playerSort
+	set Division_id = (
+		case
+			-- relegate
+			when Division_id != getMaxDiv()
+				and subRowNumReverse in (1,2)
+				then Division_id+1
+			-- promote
+			when Division_id != 1
+				and subRowNum in (1,2) 
+                then Division_id-1
+		end);
+        
+    -- TODO assign returning players who had a break to the divisions they were last promoted, remained or relegated to  (implement this when doing the third season simulation)
+	
+    -- fill in the player gaps in the divisions from top to bottom with 
 END
