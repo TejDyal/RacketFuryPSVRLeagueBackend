@@ -175,7 +175,7 @@ LibreOffice Calc is used for Website layout mockup design.
 1. Create a skeletal home page with all links to website functions
 3. Create a website layout mockup for all pages and permutations of Home page (eg, logged in, logged out view etc)
 4. player registration form
-5. set up a one-off procedure for the first season league of the website's lifetime, in placing players into their appropriate divisions according to their self-rated standards.  Leave two-player vacancies in each division to allow late sign-ups.  
+5. set up a stored procedure for setting up a new season. This entails promoting/relegating players based on previous season results and placing new players into their appropriate divisions according to their self-rated standards.  Consider leaving two-player vacancies in each division to allow late sign-ups.  
 6. match results form
 7. join a division/league 
 8. find a player
@@ -242,6 +242,12 @@ Main home page showing links and buttons to the site's features:<br>
 
 <br>
 
+### Home Page (user not logged in view):
+<br>
+
+![Home Page Mockup](Home_Page_Mockup_not_logged_in_view.JPG)
+<br><br>
+
 ### Home Page (user logged in View):
 <br>
 
@@ -255,11 +261,7 @@ Main home page showing links and buttons to the site's features:<br>
 ![Home Page Mockup](Home_Page_Mockup_logged_in_but_not_playing_in_league_view.JPG)
 <br><br>
 
-### Home Page (user logged in but not playing in league view):
-<br>
 
-![Home Page Mockup](Home_Page_Mockup_not_logged_in_view.JPG)
-<br><br>
 
 ### Players Page (user not logged in view):
 <br>
