@@ -5,20 +5,20 @@ BEGIN
     drop table if exists playersList;
     create table playersList
     (
-    Player_id int, PSN_id varchar(45), availability varchar(100), enterInNextLeague int, playingInLeagues varchar(3)
+    Player_id int, PSN_id varchar(45), availability varchar(100), enterInNextSeason int, playingInLeagues varchar(3)
     );
-    insert into playersList (Player_id, PSN_id, availability, enterInNextLeague)
+    insert into playersList (Player_id, PSN_id, availability, enterInNextSeason)
 	select 
 		Player_id,
 		PSN_id,
         availability,
-        enterInNextLeague
+        enterInNextSeason
 	from player;
     
     /* fill in playingInLeagues column */
     UPDATE playersList
 	SET playingInleagues = CASE
-    WHEN enterInNextLeague=1 THEN "Yes"
+    WHEN enterInNextSeason=1 THEN "Yes"
     ELSE "No"
 	END;    
 	 
