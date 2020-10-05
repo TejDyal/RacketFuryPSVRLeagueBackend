@@ -77,7 +77,7 @@ An accompanying social media accounts will also be setup.
 ### __How will the leagues work?__
 <br><br>
 
-![League example structure](Example_of_Box_League_structure.JPG)
+![League example structure](/project_design/Example_of_Box_League_structure.JPG)
 
 
 Each world server (eg Europe, Japan, USA etc) will have a league that runs in consecutive seasons,  each season lasting for 3 weeks.  It is not practical to have a worldwide league because opponents on different servers to their own, results in too much lag for the game to be playable.  However, there may be a pairing of servers (sucha as USA EAST and USA WEST servers) that have sufficiently low lag between them so that they can be combined into one league but ping rates need to be tested before deciding to merge servers into a league.
@@ -208,7 +208,7 @@ LibreOffice Calc is used for Website layout mockup design.
 <br>
 
 EER relational DB model diagram (created in MySQL Workbench):<br><br>
-![EER diagram](rf_league_db.png)
+![EER diagram](/project_design/rf_league_db.png)
 <br><br>
 MySQL  Workbench file:<br>
 "Racket Fury League Model V2.mwb"
@@ -245,20 +245,20 @@ Main home page showing links and buttons to the site's features:<br>
 ### Home Page (user not logged in view):
 <br>
 
-![Home Page Mockup](Home_Page_Mockup_not_logged_in_view.JPG)
+![Home Page Mockup](/project_design/Home_Page_Mockup_not_logged_in_view.JPG)
 <br><br>
 
 ### Home Page (user logged in View):
 <br>
 
 
-![Home Page Mockup](Home_Page_Mockup_Logged_in_and_playing_in_league_view.JPG)
+![Home Page Mockup](/project_design/Home_Page_Mockup_Logged_in_and_playing_in_league_view.JPG)
 <br><br>
 
 ### Home Page (user logged in but not playing in league view):
 <br>
 
-![Home Page Mockup](Home_Page_Mockup_logged_in_but_not_playing_in_league_view.JPG)
+![Home Page Mockup](/project_design/Home_Page_Mockup_logged_in_but_not_playing_in_league_view.JPG)
 <br><br>
 
 
@@ -266,19 +266,19 @@ Main home page showing links and buttons to the site's features:<br>
 ### Players Page (user not logged in view):
 <br>
 
-![Players Page Mockup](Players_page_mockup_not_logged_in_view.JPG)
+![Players Page Mockup](/project_design/Players_page_mockup_not_logged_in_view.JPG)
 <br><br>
 
 ### Players Page (user logged in view):
 <br>
 
-![Players Page Mockup](Players_page_mockup_logged_in_view.JPG)
+![Players Page Mockup](/project_design/Players_page_mockup_logged_in_view.JPG)
 <br><br>
 
 ### League Page (only viewable to registered players):
 <br>
 
-![League Page Mockup](LeaguePage.JPG)
+![League Page Mockup](/project_design/LeaguePage.JPG)
 <br><br>
 
 
