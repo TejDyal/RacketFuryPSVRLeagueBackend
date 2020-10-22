@@ -23,6 +23,7 @@ body {
     display: grid;
     grid-gap: 10px; 
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: (auto-fit, 100px);
     height: 100%;
     color: #444;
     margin: 0%;
@@ -135,13 +136,17 @@ body {
     font-size: 1em;
 }
 
-/* Winners Gradient */
+/* News Gradient */
 .j {
     grid-column: 5 / span 2;
-    grid-row: 3 / span 5;
+    grid-row: 3;
     background-image: linear-gradient(#b4c7dc, #dee6ef); 
     box-shadow: 3px 3px #999;  
-    z-index: 0;
+}
+.k {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bolder;
 }
 .m {
     font-size: 1.5em;
@@ -154,26 +159,42 @@ body {
 .o {
     text-align: center;
 }
-.winner.divsn {
-    font-weight: bold;
-    font-size: 1.2em;
+
+
+ 
+/* News Gradient 
+.j {
+    display: grid;
+    grid-gap: 10px; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 5 / span 2;
+    grid-row: 3 / span auto;    
+    background-image: linear-gradient(#b4c7dc, #dee6ef); 
+    box-shadow: 3px 3px #999;       
 }
-/* .winner.psn {
-    transform: scale(3);
+.k {
+    grid-column: 1 / span 2;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bolder;
+}
+.l {
+    grid-column: 1 / span 2;
+}
+.m {
+    grid-column: 1 / span 2;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bolder;
+}
+.n {
+    grid-column: 1 / span 2;    
+    text-align: center;
+}
+.o {
+    grid-column: 1 / span 2;    
+    text-align: center;
 } */
-.winner.psn {
-    animation-name: enlargen;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    z-index: 10;
-}
-
-@keyframes enlargen {
-    0%   {font-size: 1.2em;}
-    50%  {font-size: 1.6em;}    
-    100% {font-size: 1.2em;}
-  }
-
 
 /* Register button */
 .p {

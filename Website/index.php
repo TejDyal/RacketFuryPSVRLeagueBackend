@@ -1,6 +1,7 @@
 <?php
     $header = "Racket Fury PSVR Box Leagues";
     include ("scripts/includes/head.php");
+    include ("scripts/config/config.php");
 ?>
 
 <body>
@@ -42,25 +43,14 @@
         </div>
 
         <div class="box j" id="newsGradient">
-            <div class="box k" id="newsHeader">
-                News
-            </div>
-            <div class="box l" id="newsBody">
-                    <?php
-                        $myfile = fopen("text_blocks/news_body.txt", "r") or die("Unable to open file!");
-                        echo fread($myfile,filesize("text_blocks/news_body.txt"));
-                        fclose($myfile);
-                    ?> 
-            </div>
             <div class="box m" id="winnersHeader">
-                Last Season<br>Winners!
+                <br>Last Season<br>Winners!
             </div>
             <div class="box n" id="winnersBody">congratulations to all winners of their divisions!</div>
             <div class="box o" id="winners">
                     <?php
-                        $myfile = fopen("text_blocks/winners.txt", "r") or die("Unable to open file!");
-                        echo fread($myfile,filesize("text_blocks/winners.txt"));
-                        fclose($myfile);
+                        include("scripts\includes\connect_db.php");
+                        include("scripts\includes\winners.php");
                     ?> 
             </div>
         </div>
@@ -105,35 +95,9 @@
                     <span class="tableHeader h6">Score</span>
                 
                 <?php
-                    $servername = "localhost:3306";
-                    $username = "Normal User";
-                    $pwd = "password";
-                    $db = "rf_league_db";
-                    $conn = mysqli_connect($servername, $username, $pwd, $db);
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
-                    $sql = "call rf_league_db.latestMatches(true, false, false, 0, 0, 10)";
-                    $result = mysqli_query($conn, $sql);
-                    if (mysqli_num_rows($result) > 0) {
-                         while($row = mysqli_fetch_assoc($result)) {
-                             echo '<span class="table d1">' . $row["datePlayed"] . "</span>" . 
-                             '<span class="table d2">' . $row["ServerName"] . "</span>" . 
-                             '<span class="table d3">' . $row["Season_id"] . "</span>" . 
-                             '<span class="table d4">' . $row["Division_id"] . "</span>" . 
-                             '<span class="table d5">' . $row["p1_PSN"] . "</span>" . 
-                             '<span class="table d6">' . " vs " . "</span>" . 
-                             '<span class="table d7">' . $row["P2_PSN"] . "</span>" . 
-                             '<span class="table d8">' . $row["P1_score"] . "</span>" . 
-                             '<span class="table d9">' . " - " . "</span>" . 
-                             '<span class="table d10">' . $row["p2_score"] . "</span>";
-                        } 
-                    } else {
-                    echo "0 results";
-                    }
-                    mysqli_close($conn);
+                    include("scripts\includes\connect_db.php");
+                    include("scripts\includes\latest_match_results.php");
                 ?>
-
         </div>
     </div>
 </body>
